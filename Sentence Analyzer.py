@@ -12,7 +12,6 @@ lines3 = verbs.readlines()
 verbs.close()
 conjunctions = ['and','but','for','or','yet','nor','after', 'so', 'although', 'as', 'because', 'before', 'how', 'if', 'since', 'so', 'provided', 'than', 'that', 'though', 'unless' , 'when', 'whenever' , 'where', 'wherever', 'which', 'while']
 conjunctions2 = ['and','but','for','or','yet','nor','after', 'so']
-#Lol Matthew Chak made this to do his assignment programatically. I guess this does make English objective????
 while True:
     d = 0
     e = 0
@@ -38,7 +37,7 @@ while True:
     i = 0 #Words
     c = 1 #Independent Clauses (All sentences have at least one right?)
     s = 0 #Dependent Clauses
-    GG = str("MaTtHeW ChAk WuZ HeRe") #Eventually displays sentence type
+    GG = str("Hello") #Eventually displays sentence type
     Sentence = input("S") #Input Sentence
     Sentence2 = Sentence
     Sentence = Sentence.translate(str.maketrans('','',string.punctuation))
