@@ -11,6 +11,7 @@ lines3 = verbs.readlines()
 verbs.close()
 conjunctions = ['and','but','for','or','yet','nor','after', 'so', 'although', 'as', 'because', 'before', 'how', 'if', 'since', 'so', 'provided', 'than', 'that', 'though', 'unless' , 'when', 'whenever' , 'where', 'wherever', 'which', 'while']
 conjunctions2 = ['and','but','for','or','yet','nor','after', 'so']
+#Lol Matthew Chak made this to do his assignment programatically. I guess this does make English objective????
 while True:
     d = 0
     e = 0
@@ -19,6 +20,7 @@ while True:
     ca = 0
     b = 0
     posadj = []
+    mist = 0
     posadv = []
     re = 93829048
     posverb = []
@@ -36,7 +38,7 @@ while True:
     i = 0 #Words
     c = 1 #Independent Clauses (All sentences have at least one right?)
     s = 0 #Dependent Clauses
-    GG = str("Hello") #Eventually displays sentence type
+    GG = str("MaTtHeW ChAk WuZ HeRe") #Eventually displays sentence type
     Sentence = input("S") #Input Sentence
     Sentence2 = Sentence
     Sentence = Sentence.translate(str.maketrans('','',string.punctuation))
@@ -230,6 +232,7 @@ while True:
         #All of the words you said introduce a Dependent Clause        
         if (word == "after" or word == "although" or word == "as" or word == "because" or word == "before" or word == "how" or word == "if" or word == "since" or word == "so" or word == "provided" or word == "than" or word == "that" or word == "though" or word == "unless" or word == "when" or word == "whenever" or word == "where" or word == "wherever" or word == "which" or word == "while" or word == "After" or word == "Although" or word == "As" or word == "Because" or word == "Before" or word == "How" or word == "If" or word == "Since" or word == "So" or word == "Provided" or word == "Than" or word == "That" or word == "Though" or word == "Unless" or word == "When" or word == "Whenever" or word == "Where" or word == "Wherever" or word == "Which" or word == "While"):
             posiop2 = words3.index(word)
+            print(posiop2)
             ll = word.lower().strip()
             if ll in conjunctions2:
                 print("Confliction detected: Calculationg")
@@ -239,9 +242,10 @@ while True:
             if not ll in conjunctions2:
                 s+=1
                 print("Dependent clause identified after word", word)
-        if s > ca:
-            re = s - ca
-            s = s-re #Removes "When will he come" etc.
+            if posiop2 == 0:
+                mist = 1
+        if mist == 1:
+            s-=1
          #If there is exactly 1 independent clause and 0 dependent clauses:   
         if (c == 1 and s == 0):
             GG = str("Simple") #Sentence type is simple
