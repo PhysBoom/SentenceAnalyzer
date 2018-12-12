@@ -241,8 +241,8 @@ while True:
                     print("Dependent clause identified after word", word)
             if not ll in conjunctions2:
                 s+=1
-                print("Dependent clause identified after word", word)
-            if posiop2 == 0:
+                print("Possible dependent clause after word", word)
+            if posiop2 == 0 and ca == 0:
                 mist = 1
         if mist == 1:
             s-=1
